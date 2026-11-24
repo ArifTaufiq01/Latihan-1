@@ -1,0 +1,130 @@
+body {
+  display: flex;
+  flex-direction: column;
+  /* Menambahkan gradasi putih transparan di sisi kiri agar tulisan hitam selalu jelas terbaca */
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.9) 35%, rgba(255, 255, 255, 0.15) 75%),
+    url("image/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Membatasi lebar agar tidak terlalu mepet ke ujung layar penuh */
+  margin: 0 auto; /* Menjaga posisi navbar tetap rapi di tengah layar lebar */
+  padding: 15px 40px;
+  box-sizing: border-box;
+
+
+}
+
+.container img {
+  width: 180px;
+  height: auto; /* Menggunakan auto agar proporsi logo tidak gepeng */
+ 
+  
+}
+
+.container nav {
+  display: flex;
+  gap: 30px;
+
+
+}
+
+.container nav a {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* Dihapus 'px'-nya karena font-weight tidak memakai satuan px */
+  font-size: 16px;
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+.container nav a:hover {
+  color: #555555;
+}
+
+/* Hero Section */
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Memposisikan teks tepat di tengah layar secara vertikal */
+  flex: 1; /* Mengisi sisa tinggi layar di bawah navbar */
+  width: 100%;
+  max-width: 1200px; /* Sejajar lurus dengan logo di atasnya */
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  max-width: 520px; /* Menggunakan max-width tanpa height kaku (500px dihapus) */
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.text h2 {
+  font-size: 42px; /* Diperbesar agar gagah di layar penuh */
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #111827;
+
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 36px;
+  color: #374151;
+
+}
+
+/* Pembungkus Tombol */
+.button {
+  display: flex;
+  gap: 16px; /* Menggunakan gap agar tombol sejajar rapi di kiri (bukan space-evenly) */
+
+}
+
+.button button {
+  background-color: transparent;
+  border: 2px solid #111827; /* Diubah dari putih ke gelap agar tegas di atas gradasi terang */
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button button,
+.button a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #111827;
+  text-decoration: none;
+}
+
+/* Efek saat kursor menyentuh tombol */
+.button button:hover {
+  background-color: #111827;
+}
+
+.button button:hover a,
+.button button:hover {
+  color: #ffffff;
+}

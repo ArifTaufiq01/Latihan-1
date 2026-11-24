@@ -1,0 +1,61 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+header{
+    color:white;
+    background-color: black;
+    font-size: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.biodata{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.foto img{
+    text-align: center;
+border-radius: 300px;
+border: 2px solidblack;
+    height: 250px;
+    width: 200px;
+    margin-top: 20px;
+}
+.biodata p{
+    text-align: center;
+    font-weight: bold;
+}
+.hobisosmed{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+
+}
+.hobi{
+       flex: 1;
+    box-sizing: border-box;
+    background-color: red;
+    padding: 20px;
+    border-radius: 10px;
+}
+.sosmed{
+     flex: 1;
+    box-sizing: border-box;
+    background-color: red;
+    padding: 20px;
+    border-radius: 10px;
+}
+.kontak{
+    padding: 20px;
+    background-color: bisque;
+}
+.kontak h2{
+    color: blueviolet;
+}
+.kontak textarea{
+    margin: 0px;
+
+}
+

@@ -1,0 +1,93 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-image:  linear-gradient(to right,rgba(255, 255, 255, 0.4)35%,rgba(0, 0, 0, 0.15)75%),url(Image/Background.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    padding: 15px 40px;
+    max-width: 1200px;
+    margin:0px auto;
+
+}
+.header img{
+    width: 200px;
+    height: auto;
+}
+.header nav{
+    display: flex;
+    gap: 20px;
+    
+}
+.header nav a {
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+.header nav :hover{
+    color: orange;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 30px auto;
+    padding: 10px 20px;
+}
+.hero-text h1{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    font-weight: 900;
+    color: black;
+    
+    
+}
+.hero-text h1 span{
+    color: orange;
+}
+.hero-text p{
+    text-align: center;
+    color:white;
+    font-family: 'inter',sans-serif;
+    font-size: 2opx;
+    text-shadow: 0 2px 8px black;
+}
+.hero-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+.hero-button button {
+    background-color: rgb(61, 61, 61);
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.hero-button :hover{
+    background-color: orange;
+}
+.hero-button button a{
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+
+}
+.hero-button button span{
+    background-color: orange;
+}

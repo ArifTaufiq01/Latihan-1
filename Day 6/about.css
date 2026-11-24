@@ -1,0 +1,78 @@
+body {
+  display: flex;
+  flex-direction: column;
+  /* Menambahkan gradasi putih transparan di sisi kiri agar tulisan hitam selalu jelas terbaca */
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.9) 35%, rgba(255, 255, 255, 0.15) 75%),
+    url("image/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Membatasi lebar agar tidak terlalu mepet ke ujung layar penuh */
+  margin: 0 auto; /* Menjaga posisi navbar tetap rapi di tengah layar lebar */
+  padding: 15px 40px;
+  box-sizing: border-box;
+
+
+}
+
+.container img {
+  width: 180px;
+  height: auto; /* Menggunakan auto agar proporsi logo tidak gepeng */
+ 
+  
+}
+
+.container nav {
+  display: flex;
+  gap: 30px;
+
+
+}
+
+.container nav a {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* Dihapus 'px'-nya karena font-weight tidak memakai satuan px */
+  font-size: 16px;
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+.container nav a:hover {
+  color: #555555;
+}
+.container1{
+    width: 100%;
+  max-width: 1200px; /* Membatasi lebar agar tidak terlalu mepet ke ujung layar penuh */
+  margin: 0 auto; /* Menjaga posisi navbar tetap rapi di tengah layar lebar */
+  padding: 15px 40px;
+    
+}
+.container1 h1,p{
+    margin: 10px 40px ;
+    margin-right: 200px;
+    display: flex;
+    font-family:'Poppins', sans-serif;
+}
+.container1 h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+.container1 p{
+    font-family:'Poppins', sans-serif;
+    text-align: justify;
+    font-size: 20px;
+}

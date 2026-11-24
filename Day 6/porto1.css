@@ -1,0 +1,99 @@
+body {
+  display: flex;
+  flex-direction: column;
+  /* Menambahkan gradasi putih transparan di sisi kiri agar tulisan hitam selalu jelas terbaca */
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.9) 35%, rgba(255, 255, 255, 0.15) 75%),
+    url("image/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Bagian Judul PORTOFOLIO */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #0635a3 0%, #0a3d08 100%); /* Gradasi gelap elegan */
+  color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+header h1, header h2 {
+  margin: 0;
+}
+
+/* Pembungkus Utama Galeri (3 atas, 2 bawah) */
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+/* Kartu Masing-Masing Kategori Foto */
+.Grid div {
+  width: calc(33.333% - 16px);
+  min-width: 260px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0; /* Garis tepi tipis warna abu-abu halus */
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efek saat kartu disentuh kursor */
+.Grid div:hover {
+  transform: translateY(-6px); /* Kartu sedikit terangkat */
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+  border-color: #3b82f6; /* Garis berubah menjadi biru aksen */
+}
+
+/* Label Judul Kategori (Running, Wedding, dll) */
+.Grid div h2 {
+  background-color: #eff6ff; /* Latar biru muda lembut */
+  color: #1d4ed8; /* Teks biru tegas */
+  border: 1px solid #bfdbfe;
+  border-radius: 20px; /* Bentuk kapsul/pill modern */
+  padding: 6px 20px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Label ikut berubah warna saat kartu di-hover */
+.Grid div:hover h2 {
+  background-color: #1d4ed8;
+  color: #ffffff;
+}
+
+/* Gambar Portofolio */
+.Grid div img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}

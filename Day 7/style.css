@@ -1,0 +1,31 @@
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box h2{
+    display: flex;
+    justify-content: center;
+
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 200px;
+    gap: 15px;
+    max-width: 1200px;
+    justify-content: center;
+}
+.container div{
+    display: flex;
+    background-color: blue;
+    padding: 40px;
+    box-sizing: border-box;
+    justify-content: center;
+    max-width: 1200px;
+}
+@media(max-width:600px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
