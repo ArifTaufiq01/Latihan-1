@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Info Gempa BMKG</title>
+</head>
+<body>
+
+  <h2>Info Gempa Terkini (Sumber: BMKG)</h2>
+  
+  <!-- Elemen HTML kosong yang akan diisi oleh JavaScript DOM -->
+  <p>Waktu: <strong id="waktu">Memuat data...</strong></p>
+  <p>Magnitudo: <strong id="magnitudo">-</strong></p>
+  <p>Wilayah: <strong id="wilayah">-</strong></p>
+
+  <script>
+    // Langsung ke endpoint resmi BMKG tanpa proxy
+    const urlBMKG = "https://bmkg.go.id";
+
+    fetch(urlBMKG)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Status HTTP: " + response.status);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        const infoGempa = data.Infogempa.gempa;
+
+        document.getElementById("waktu").innerText = infoGempa.Tanggal + " - " + infoGempa.Jam;
+        document.getElementById("magnitudo").innerText = infoGempa.Magnitude + " SR";
+        document.getElementById("wilayah").innerText = infoGempa.Wilayah;
+      })
+      .catch(error => {
+        console.error("Detail Error:", error);
+        document.getElementById("waktu").innerText = "Gagal memuat data.";
+      });
+  </script>
+
+</body>
+</html>
